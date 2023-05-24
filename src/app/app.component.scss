@@ -1,0 +1,87 @@
+.main-component{
+    margin: auto;
+    padding: 5px;
+    text-align: center;
+    border-radius: 7px;
+    border: solid black;
+    display: block;
+    border-radius: 10px;
+    width: 500px;
+    height: 520px;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(8,7,42,1) 75%, rgb(8, 10, 63) 100%);
+    color: white;;
+}
+
+.body{
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.city-input{
+    margin: 25px;
+}
+
+
+.weatherWidgetRow{
+    display:block;
+    margin:auto;
+    text-align: center;
+    // width: fit-content;
+}
+
+.sun{
+    margin-top: 10px;
+    color: yellow;
+    filter: drop-shadow( 1px 1px 10px yellow);
+}
+
+.moon{
+    margin-top: 10px;
+    color: white;
+    filter: drop-shadow( 1px 1px 10px white);
+}
+
+.cloudDiv{
+    margin-top: -35px;
+}
+
+.cloud{
+    color: rgb(104, 175, 197);
+    filter: drop-shadow( 1px 1px 5px rgb(104, 175, 197));
+    animation-name: cloudMovement;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+@keyframes cloudMovement{
+    from{margin-left: -55px;}
+    to{margin-left: 65px;}
+}
+
+.middle-bar{
+    text-align: left;
+    padding: 2rem 2rem;
+}
+
+.weatherDataRow{
+    padding: 5px;
+}
+
+.data-component{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+.data-component-row {
+    text-align: center;
+    flex:40%;
+    margin-bottom: 10px;
+    border: solid #a39b9b;
+    border-radius: 6px;
+    // width: 270;
+    min-height: 70;
+}
