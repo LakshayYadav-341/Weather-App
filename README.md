@@ -1,3 +1,6 @@
+Download fontAwesome web kit and add it into the src folder.
+Add angular mdoules and node modules
+
 # WeatherApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
