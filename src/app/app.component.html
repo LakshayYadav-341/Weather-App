@@ -1,43 +1,93 @@
-<div class="body">
-  <div class="main-component">
-    <div class="top-bar">
-      <input
-        class="city-input"
-        type="text"
-        name="search"
-        #box
-        (keyup)="getValue(box.value)"
-        placeholder="Search city Name"
-      />
-      <button class="btn btn-sm btn-outline-primary" (click)="loadData()">
-        Search
-      </button>
+<header class="header">
+  <nav>
+    <a href="#" class="logo">
+      <i class="fas fa-cloud-sun"></i>
+      WeatherApp
+    </a>
+    <div class="nav-links">
+      <a href="#" class="active">Weather</a>
+      <a href="#">Forecast</a>
+      <a href="#">Maps</a>
+      <a href="#">About</a>
     </div>
-    <div class="middle-bar">
-      <div *ngIf="isDay && display" class="weatherWidgetRow weatherDataRow">
-        <i class="fas fa-4x fa-sun sun"></i>
-      </div>
-      <div *ngIf="!isDay && display" class="weatherWidgetRow weatherDataRow">
-        <i class="fas fa-4x fa-moon moon"></i>
-      </div>
-      <div class="weatherWidgetRow cloudDiv weatherDataRow">
-        <i class="fas fa-cloud fa-4x cloud"></i>
-      </div>
-      <div class="data-component">
-        <div *ngIf="display" class="weatherDataRow data-component-row" style="font-size: 20px">
-          Temperature <i class="fa fa-temperature-low"></i> <br> {{ temp_celcius }}°C
+  </nav>
+</header>
+
+<div class="body">
+  <div class="page-heading">
+    <h1>Weather Forecast</h1>
+    <p>Get real-time weather updates for any city around the world</p>
+  </div>
+
+  <div class="main-component">
+    <div class="body">
+      <div class="main-component">
+        <div class="top-bar">
+          <input
+            class="city-input"
+            type="text"
+            name="search"
+            #box
+            (keyup)="getValue(box.value)"
+            placeholder="Search city Name"
+          />
+          <button class="btn btn-sm btn-outline-primary" (click)="loadData()">
+            Search
+          </button>
         </div>
-        <div *ngIf="display" style="font-size: 20px" class="weatherDataRow data-component-row">
-          Min/Max Temp <i class="fa fa-temperature-high"></i><br />
-          {{ temp_min }}°C / {{ temp_max }}°C
-        </div>
-        <div *ngIf="display" style="font-size: 20px" class="weatherDataRow data-component-row">
-          Feels Like <br> {{ temp_feels_like }}°C
-        </div>
-        <div *ngIf="display" style="font-size: 20px" class="weatherDataRow data-component-row">
-          Humidity <i class="fa-solid fa-droplet"></i> <br> {{ humidity }}
+        <div class="middle-bar">
+          <div *ngIf="isDay && display" class="weatherWidgetRow weatherDataRow">
+            <i class="fas fa-4x fa-sun sun"></i>
+          </div>
+          <div
+            *ngIf="!isDay && display"
+            class="weatherWidgetRow weatherDataRow"
+          >
+            <i class="fas fa-4x fa-moon moon"></i>
+          </div>
+          <div class="weatherWidgetRow cloudDiv weatherDataRow">
+            <i class="fas fa-cloud fa-4x cloud"></i>
+          </div>
+          <div class="data-component">
+            <div
+              *ngIf="display"
+              class="weatherDataRow data-component-row"
+              style="font-size: 20px"
+            >
+              Temperature <i class="fa fa-temperature-low"></i> <br />
+              {{ temp_celcius }}°C
+            </div>
+            <div
+              *ngIf="display"
+              style="font-size: 20px"
+              class="weatherDataRow data-component-row"
+            >
+              Min/Max Temp <i class="fa fa-temperature-high"></i><br />
+              {{ temp_min }}°C / {{ temp_max }}°C
+            </div>
+            <div
+              *ngIf="display"
+              style="font-size: 20px"
+              class="weatherDataRow data-component-row"
+            >
+              Feels Like <br />
+              {{ temp_feels_like }}°C
+            </div>
+            <div
+              *ngIf="display"
+              style="font-size: 20px"
+              class="weatherDataRow data-component-row"
+            >
+              Humidity <i class="fa-solid fa-droplet"></i> <br />
+              {{ humidity }}
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<footer class="footer">
+  <p>© 2025 WeatherApp. All rights reserved.</p>
+</footer>
